@@ -1,18 +1,20 @@
-import React, { Suspense, lazy } from 'react';
+import React, { Suspense, lazy } from "react";
+import { BrowserRouter, Routes, Route } from "react-router";
+import First from "./First";
+import Second from "./Second";
 
-const App1 = lazy(() => import('app1/App'));
-const App2 = lazy(() => import('app2/App'));
 
 const App: React.FC = () => {
   return (
-    <div>
-      <h1>Container</h1>
-      <Suspense fallback={<div>Loading App1...</div>}>
-        <App1 />
-      </Suspense>
-      <Suspense fallback={<div>Loading App2...</div>}>
-        <App2 />
-      </Suspense>
+
+    <div style={{height: "100vh"}}>
+              <BrowserRouter>
+    <Routes>
+      <Route path="/" element={<First />} />
+      <Route path="/home" element={<Second />} />
+    </Routes>
+  </BrowserRouter>
+
     </div>
   );
 };
