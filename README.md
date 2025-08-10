@@ -31,6 +31,3 @@ This project demonstrates a basic Micro Frontends architecture using **Webpack M
 - When users navigate to `/app1`, the container loads and displays App1.
 - When users navigate to `/app2`, the container loads and displays App2.
 - The routing logic is handled inside the container, allowing seamless navigation between micro frontends.
-
-### 📁 Folder Structure
-
